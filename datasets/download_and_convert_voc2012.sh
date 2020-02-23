@@ -35,7 +35,7 @@
 # Exit immediately if a command exits with a non-zero status.
 set -e
 
-CURRENT_DIR="/kaggle/input/deeplab/datasets"
+CURRENT_DIR="~/deeplab/datasets"
 WORK_DIR="/kaggle/working/pascal_voc_seg"
 mkdir -p "${WORK_DIR}"
 cd "${WORK_DIR}"
