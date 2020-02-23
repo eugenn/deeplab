@@ -59,7 +59,7 @@ import os.path
 import sys
 import build_data
 from six.moves import range
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 FLAGS = tf.app.flags.FLAGS
 
