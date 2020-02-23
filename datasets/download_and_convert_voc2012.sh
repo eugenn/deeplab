@@ -36,10 +36,14 @@
 set -e
 
 CURRENT_DIR="/root/deeplab/datasets"
+
 WORK_DIR="/kaggle/working/pascal_voc_seg"
 mkdir -p "${WORK_DIR}"
 cd "${WORK_DIR}"
 
+SEMANTIC_SEG_FOLDER="/kaggle/working/SegmentationClassRaw"
+mkdir -p "${SEMANTIC_SEG_FOLDER}"
+cd "${SEMANTIC_SEG_FOLDER}"
 
 cd "${CURRENT_DIR}"
 
@@ -48,7 +52,7 @@ PASCAL_ROOT="/kaggle/input/pascal-voc-2012/VOC2012"
 
 # Remove the colormap in the ground truth annotations.
 SEG_FOLDER="${PASCAL_ROOT}/SegmentationClass"
-SEMANTIC_SEG_FOLDER="${PASCAL_ROOT}/SegmentationClassRaw"
+#SEMANTIC_SEG_FOLDER="${PASCAL_ROOT}/SegmentationClassRaw"
 
 echo "Removing the color map in ground truth annotations..."
 python ./remove_gt_colormap.py \
